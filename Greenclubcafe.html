@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script language="javascript">
+        var qiksearch_js_text = new Array ("ยินดีต้อนรับทุกท่าน", "เข้าสู่", "Wonderful ","Green","Club Cafe");
+        var qiksearch_space_width = 1440; // ความกว้างของกรอบ
+        var qiksearch_space_height = 50; // ความยาวของกรอบ
+        var qiksearch_space_borderw=10; // ความหนาของกรอบ
+        var qiksearch_space_borderc="#ffff33"; // สีของกรอบ
+        var timeOutVal=90; //ความเร็วในการเปลี่ยนข้อความ (เลขยิ่งน้อยยิ่งเร็ว)
+        
+        document.write('<table width="' + qiksearch_space_width + '" height="' + qiksearch_space_height + '" style="background:#FFFFFF; border:' + qiksearch_space_borderw + ' solid ' + qiksearch_space_borderc + '"><tr><td align="middle">');
+        document.write('<div id="qiksearch_js_space">');
+        document.write('</div>');
+        document.write('</td></tr></table>');
+        
+        var def_10='A',def_11='B',def_12='C',def_13='D',def_14='E',def_15='F';
+        var colorVal=15;
+        var div_count=0;
+        
+        function qiksearch_fade_desat(getColorIntVal)
+        {
+         var returnVal;
+         if(getColorIntVal>=10)
+         {
+          for(var i=0; i<=15; i++)
+          {
+           if((getColorIntVal==i))
+           {
+            returnVal = eval('def_' + i);
+           }
+          }
+         }
+         else
+         {
+          returnVal=getColorIntVal;
+         }
+         return(returnVal);
+        } 
+        
+        function writeDiv()
+        {
+         document.all.qiksearch_js_space.innerHTML= '<font face="Ms Sans Serif" size="100" color="#688b2e"' +  joinColor(qiksearch_fade_desat(colorVal)) + '">' + qiksearch_js_text[div_count] + '</span></font>' ;
+        
+         if((colorVal>0)  && (colorVal!=0))
+         {
+          colorVal--;
+         }
+         else
+         {
+          colorVal=15;
+          if(div_count<qiksearch_js_text.length)
+          {
+           div_count++;
+          }
+          if(div_count==qiksearch_js_text.length)
+          {
+            div_count = 0;
+          }
+         }
+        
+         if(div_count<qiksearch_js_text.length)
+         {
+          setTimeout("writeDiv()",timeOutVal);
+         }
+        }
+        function joinColor(getColor)
+        {
+         return (getColor + '0' + getColor + '0' + getColor + '0');
+        }
+        function resetAll()
+        {
+         div_count=0;
+         colorVal=15;
+        }
+        writeDiv();
+        </script>
+    <title>Wonderful Green Club Cafe</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="./node_modules/web3/dist/web3.min.js">
+    </script>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item3">
+            <div class="container">
+                <h1>Wonderful Green Club Cafe</h1>
+                <label class="col-lg-2 control-label">
+                Drinks</label>
+                <div class="menucafe">
+                     <img src="matcha.jpg" alt="matcha milk" style="float: right;width: 250px;height: 169px;">
+                     <h2>Green Tea Matcha </h2>  
+                     <button id="btngreentea" value="Green Tea Matcha"><a href="#" onmouseover="document.body.style.scrollbarFaceColor='blue'"
+                        onmouseout="document.body.style.scrollbarFaceColor='black'">Order 0.01 ETH</a></button>
+                </div>
+                <div class="menucafe">
+                    <img src="matcha pun.png" alt="matcha milk" style="float: right;width: 250px;height: 169px;">
+                    <h2>GreenTea Matcha Milk Ice</h2>  
+                    <button id="btngreentea2" value="GreenTea Matcha Milk Ice"><a href="#" onmouseover="document.body.style.scrollbarFaceColor='blue'"
+                        onmouseout="document.body.style.scrollbarFaceColor='black'">Order 0.02 ETH</a></button>
+                </div>
+                <div class="menucafe">
+                    <img src="matcha late.png" alt="matcha milk" style="float: right;width: 250px;height: 170px;">
+                    <h2>GreenTea Matcha Late</h2>  
+                    <button id="btngreentea3" value="GreenTea Matcha Late"><a href="#" onmouseover="document.body.style.scrollbarFaceColor='blue'"
+                        onmouseout="document.body.style.scrollbarFaceColor='black'">Order 0.02 ETH</a></button>
+                </div>
+                <div class="menucafe">
+                    <img src="MatchaCake.jpg" alt="matcha milk" style="float: right;width: 200px;height: 169px;">
+                    <h2>Matcha Redbean Cake</h2>  
+                    <button id="btngreentea4" value="Matcha Redbean Cake"><a href="#" onmouseover="document.body.style.scrollbarFaceColor='blue'"
+                        onmouseout="document.body.style.scrollbarFaceColor='black'">Order 0.05 ETH</a></button>
+                </div>
+                <div class="menucafe">
+                    <img src="BingsoMatcha.jpg" alt="matcha milk" style="float: right;width: 175px;height: 150px;">
+                    <h2>Bingso Matcha</h2>  
+                    <button id="btngreentea5" value="Bingso Matcha"><a href="#" onmouseover="document.body.style.scrollbarFaceColor='blue'"
+                        onmouseout="document.body.style.scrollbarFaceColor='black'">Order 0.05 ETH</a></button>
+                </div>
+                <div class="menucafe">
+                    <img src="MochiMatcha.jpg" alt="matcha milk" style="float: right;width: 190px;height: 150px;">
+                    <h2>Mochi Matcha</h2>  
+                    <button id="btngreentea6" value="Mochi Matcha"><a href="#" onmouseover="document.body.style.scrollbarFaceColor='blue'"
+                        onmouseout="document.body.style.scrollbarFaceColor='black'">Order 0.04 ETH</a></button>
+                </div>
+             </div>
+        </div>
+             <div class="item1">
+             <p id="result"></p>  
+            <table id="t1">
+                    <caption>Q</caption>
+                    <colgroup>
+                        <col span="2" class="c2">
+                        <col>
+                        <col class="c1">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Order</th>
+                            <th>Owner</th>
+                        </tr>
+                    </thead>
+                    <tbody id="insertionPoint">
+                      
+                    </tbody>
+        </div>
+    </div>
+        
+        
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
+    </script>
+    <script language="javascript">
+        function insertData(n,o) {
+            var name = n;
+            var address = o;
+            var dt = new Date();
+            document.getElementById("insertionPoint").innerHTML += "<tr><td>" + dt.toLocaleTimeString() + "</td><td>" + name + "</td><td>" + address + "</td></tr>";
+          
+            
+        }
+    </script>
+    <script>
+        if (typeof web3 !== 'undefined') {
+            // this statement is executed if you are using 
+            // MetaMask 
+            async function enableAccounts() {            
+                await ethereum.enable()
+            }        
+            enableAccounts();  
+        } else {
+            // set the provider you want from Web3.providers
+            web3 = new Web3(
+                new Web3.providers.HttpProvider(
+                "http://localhost:8545"));
+        }
+
+        let abi = [
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "name",
+				"type": "string"
+			}
+		],
+		"name": "Buy",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "text",
+				"type": "string"
+			}
+		],
+		"name": "Bought",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "from",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "text",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "reason",
+				"type": "string"
+			}
+		],
+		"name": "RegistrationError",
+		"type": "event"
+	}
+];
+        var contract = web3.eth.contract(abi);
+        var myContract = contract.at(
+            '0x42A26D18cfd3d8CB62B8C857600910A8F413270d');        
+
+        var completeEvent =             
+            myContract.Bought();    
+        var refreshtable = false;
+
+        completeEvent.watch(function(error, result) {
+            if (!error){
+		//$("#result").html("Got it");               
+		if (result.args.from == 
+                   web3.eth.defaultAccount){
+                        
+                   $("#result").html("Order: " + 
+                       result.args.text + " Owner: " + result.args.from);  
+                       if (refreshtable == true){
+                        insertData(result.args.text,result.args.from);
+                        refreshtable = false;
+                    }
+                             
+               }               
+            }
+        });
+        
+        var errorEvent = 
+            myContract.RegistrationError();
+        
+        errorEvent.watch(function(error, result) {
+            if (!error){
+               if (result.args.from == 
+                   web3.eth.defaultAccount){
+                   $("#result").html(
+                       "Error. <br/> Name: " + 
+                       result.args.text + 
+                       "<br/> Reason: " + result.args.reason); 
+               }               
+            }
+        });
+
+        $("#btngreentea").click(function() {
+            refreshtable = true;
+            myContract.Buy($("#btngreentea").val(),
+            {
+              gas: 300000,
+              from: web3.eth.accounts[0],
+              value: 10000000000000000
+            },
+	    (error, result) => {
+                $("#result").html("waiting for confirmation...");
+                
+            });
+            
+        });
+
+        $("#btngreentea2").click(function() {
+            refreshtable = true;
+            myContract.Buy($("#btngreentea2").val(),
+            {
+              gas: 300000,
+              from: web3.eth.accounts[0],
+              value: 20000000000000000
+            },
+	    (error, result) => {
+                $("#result").html("waiting for confirmation...");
+            });
+        });
+
+        $("#btngreentea3").click(function() {
+            refreshtable = true;
+            myContract.Buy($("#btngreentea3").val(),
+            {
+              gas: 300000,
+              from: web3.eth.accounts[0],
+              value: 20000000000000000
+            },
+	    (error, result) => {
+                $("#result").html("waiting for confirmation...");
+            });
+        });
+        
+        $("#btngreentea4").click(function() {
+            refreshtable = true;
+            myContract.Buy($("#btngreentea4").val(),
+            {
+              gas: 300000,
+              from: web3.eth.accounts[0],
+              value: 50000000000000000
+            },
+	    (error, result) => {
+                $("#result").html("waiting for confirmation...");
+            });
+        });
+
+        $("#btngreentea5").click(function() {
+            refreshtable = true;
+            myContract.Buy($("#btngreentea5").val(),
+            {
+              gas: 300000,
+              from: web3.eth.accounts[0],
+              value: 50000000000000000
+            },
+	    (error, result) => {
+                $("#result").html("waiting for confirmation...");
+            });
+        });
+        
+        $("#btngreentea6").click(function() {
+            refreshtable = true;
+            myContract.Buy($("#btngreentea6").val(),
+            {
+              gas: 300000,
+              from: web3.eth.accounts[0],
+              value: 40000000000000000
+            },
+	    (error, result) => {
+                $("#result").html("waiting for confirmation...");
+            });
+        });
+    </script>
+</body>
+</html>
